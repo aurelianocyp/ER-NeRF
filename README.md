@@ -26,6 +26,7 @@ pip install tensorflow-gpu==2.8.0
   ```
 
 - Prepare the 3DMM model for head pose estimation.
+
 先在data_utils/face_tracking下创建3DMM文件夹
   ```bash
   wget https://github.com/YudongGuo/AD-NeRF/blob/master/data_util/face_tracking/3DMM/exp_info.npy?raw=true -O data_utils/face_tracking/3DMM/exp_info.npy
