@@ -12,6 +12,7 @@ conda create -n ernerf python=3.10
 conda install pytorch==1.12.1 torchvision==0.13.1 cudatoolkit=11.3 -c pytorch
 conda install PyAudio
 pip install -r requirements.txt
+source /etc/network_turbo
 pip install "git+https://github.com/facebookresearch/pytorch3d.git"
 pip install tensorflow-gpu==2.8.0
 ```
