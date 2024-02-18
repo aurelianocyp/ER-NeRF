@@ -1,7 +1,6 @@
 # Efficient Region-Aware Neural Radiance Fields for High-Fidelity Talking Portrait Synthesis
 This is the official repository for our ICCV 2023 paper **Efficient Region-Aware Neural Radiance Fields for High-Fidelity Talking Portrait Synthesis**.
 ### [Paper](https://openaccess.thecvf.com/content/ICCV2023/html/Li_Efficient_Region-Aware_Neural_Radiance_Fields_for_High-Fidelity_Talking_Portrait_Synthesis_ICCV_2023_paper.html) | [Project](https://fictionarry.github.io/ER-NeRF/) | [ArXiv](https://arxiv.org/abs/2307.09323) | [Video](https://youtu.be/Gc2d3Z8MMuI)
-![image](assets/main.png)
 ## Installation
 
 Tested on Ubuntu 18.04, Pytorch 1.12 and CUDA 11.3.
@@ -11,6 +10,7 @@ Tested on Ubuntu 18.04, Pytorch 1.12 and CUDA 11.3.
 ```bash
 conda create -n ernerf python=3.10
 conda install pytorch==1.12.1 torchvision==0.13.1 cudatoolkit=11.3 -c pytorch
+conda install PyAudio
 pip install -r requirements.txt
 pip install "git+https://github.com/facebookresearch/pytorch3d.git"
 pip install tensorflow-gpu==2.8.0
