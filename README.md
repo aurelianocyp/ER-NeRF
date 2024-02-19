@@ -88,7 +88,7 @@ The test results should be about:
   ```
 
 * Obtain AU45 for eyes blinking
-  在openface界面，点击wiki链接进入使用方法，可以点击windows，然后下载64位的，然后直接在powershell中输入` .\download_models.ps1`就可以运行，但是可能报错，需要先将powershell设置一下： `set-executionpolicy remotesigned` 然后需要在download_models.ps1的属性中点击一下解除锁定，即可开始运行下载模型，然后在图形化界面中操作即可
+  在openface界面，点击wiki链接进入使用方法，可以点击windows，然后下载64位的，然后直接在powershell中输入` .\download_models.ps1`就可以运行，但是可能报错，需要先将powershell设置一下： `set-executionpolicy remotesigned` 然后需要在download_models.ps1的属性中点击一下解除锁定，即可开始运行下载模型，然后在图形化界面中操作即可。下载完成后最好重启下OpenFaceOffline
   
   Run `FeatureExtraction` in [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace), rename and move the output CSV file to `data/<ID>/au.csv`.
 
