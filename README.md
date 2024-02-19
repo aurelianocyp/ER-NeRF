@@ -101,7 +101,7 @@ You should specify the type of audio feature by `--asr_model <deepspeech, espera
 * DeepSpeech
 
   ```bash
-  python data_utils/deepspeech_features/extract_ds_features.py --input data/<name>.wav # save to data/<name>.npy
+  python data_utils/deepspeech_features/extract_ds_features.py --input data/<ID>/aud.wav # save to data/<name>.npy
   ```
 
 * Wav2Vec
