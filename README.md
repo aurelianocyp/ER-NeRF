@@ -134,6 +134,7 @@ python main.py data/obama/ --workspace trial_obama/ -O --iters 125000 --finetune
 
 # train (torso)
 # <head>.pth should be the latest checkpoint in trial_obama
+# 这里得保证pth文件在主目录下，而不是放在trial obama文件夹下
 python main.py data/obama/ --workspace trial_obama_torso/ -O --torso --head_ckpt <head>.pth --iters 200000
 ```
 
