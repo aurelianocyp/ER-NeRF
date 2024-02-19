@@ -78,6 +78,9 @@ The test results should be about:
   The video **must be 25FPS, with all frames containing the talking person**. 
   The resolution should be about 512x512, and duration about 1-5 min.
 
+首先`pip install 'protobuf~=3.20.0'`一下，否则会报错。然后开一下代理，可能在下载一个zip文件时会停留不少时间。
+
+
 * Run script to process the video. (may take several hours)
 
   ```bash
