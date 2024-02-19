@@ -150,22 +150,8 @@ python main.py data/obama/ --workspace trial_obama_torso/ -O --torso --test # re
 
 ```bash
 # Adding "--smooth_path" may help decrease the jitter of the head, while being less accurate to the original pose.
+# npy文件也需要放在主目录下
 python main.py data/obama/ --workspace trial_obama_torso/ -O --torso --test --test_train --aud <audio>.npy
-```
-
-## Citation
-
-Consider citing as below if you find this repository helpful to your project:
-
-```
-@InProceedings{li2023ernerf,
-    author    = {Li, Jiahe and Zhang, Jiawei and Bai, Xiao and Zhou, Jun and Gu, Lin},
-    title     = {Efficient Region-Aware Neural Radiance Fields for High-Fidelity Talking Portrait Synthesis},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2023},
-    pages     = {7568-7578}
-}
 ```
 
 ## Acknowledgement
