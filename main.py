@@ -172,7 +172,7 @@ if __name__ == '__main__':
     criterion = torch.nn.MSELoss(reduction='none')
 
     if opt.test:
-        
+        print("opt.test")
         if opt.gui:
             metrics = [] # use no metric in GUI for faster initialization...
         else:
@@ -182,12 +182,14 @@ if __name__ == '__main__':
         trainer = Trainer('ngp', opt, model, device=device, workspace=opt.workspace, criterion=criterion, fp16=opt.fp16, metrics=metrics, use_checkpoint=opt.ckpt)
 
         if opt.test_train:
+            print("opt.test_train")
             test_set = NeRFDataset(opt, device=device, type='train')
             # a manual fix to test on the training dataset
             test_set.training = False 
             test_set.num_rays = -1
             test_loader = test_set.dataloader()
         else:
+            print("opt.test_train pass")
             test_loader = NeRFDataset(opt, device=device, type='test').dataloader()
 
 
@@ -196,15 +198,17 @@ if __name__ == '__main__':
         model.eye_areas = test_loader._data.eye_area
 
         if opt.gui:
+            print("opt.gui")
             from nerf_triplane.gui import NeRFGUI
             # we still need test_loader to provide audio features for testing.
             with NeRFGUI(opt, trainer, test_loader) as gui:
                 gui.render()
         
         else:
+            print("opt.gui pass")
             ### test and save video (fast)  
             trainer.test(test_loader)
-
+            print("start evaluate metrics")
             ### evaluate metrics (slow)
             if test_loader.has_gt:
                 trainer.evaluate(test_loader)
@@ -212,7 +216,7 @@ if __name__ == '__main__':
 
     
     else:
-
+        print("opt.test pass")
         optimizer = lambda model: torch.optim.AdamW(model.get_params(opt.lr, opt.lr_net), betas=(0, 0.99), eps=1e-8)
 
         train_loader = NeRFDataset(opt, device=device, type='train').dataloader()
