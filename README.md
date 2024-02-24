@@ -129,6 +129,7 @@ First time running will take some time to compile the CUDA extensions.
 ```bash
 # train (head and lpips finetune, run in sequence)
 # 工作空间即存储一些中间表示的文件夹，会直接创建在主目录下，会自动进行tensorboard记录
+# 貌似训练的帧数越少，经历的epoch会越多，并且参数的iters与笔记的iteration貌似不太同，猜测是iter/帧数等于epoch，但是100000/8000=12.5，确有14个epoch
 python main.py data/<ID>/ --workspace <workspace>/ -O --iters 100000
 python main.py data/obama/ --workspace trial_obama/ -O --iters 125000 --finetune_lips --patch_size 32
 
