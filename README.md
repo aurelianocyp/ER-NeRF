@@ -103,7 +103,7 @@ You should specify the type of audio feature by `--asr_model <deepspeech, espera
   ```bash
   python data_utils/deepspeech_features/extract_ds_features.py --input data/<ID>/aud.wav # save to data/<name>.npy
   ```
-  完成后将npy文件后面加个_ds，即aud_ds.npy
+  完成后将npy文件后面加个_ds，即aud_ds.npy. 可能处理某些直接拿来的wav文件时会报AttributeError: module 'numpy' has no attribute 'float'.只需要pip install "numpy<1.24"即可
 
 * Wav2Vec
 
